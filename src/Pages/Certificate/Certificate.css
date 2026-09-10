@@ -1,0 +1,279 @@
+/* =========================================
+   CERTIFICATE SECTION
+========================================= */
+
+.certificate-sections {
+  position: relative;
+  padding: 80px 20px;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+/* Huge gradient only on LEFT side */
+.certificate-sections::before {
+  content: "";
+  position: absolute;
+  top: -250px;
+  left: -350px;
+
+  width: 850px;
+  height: 850px;
+
+  background: linear-gradient(
+    90deg,
+    #087fc2,
+    #008f7b,
+    #009b4e
+  );
+
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.22;
+
+  pointer-events: none;
+}
+
+/* Content above gradient */
+.certificate-containers,
+.certificate-headings,
+.certificate-cards {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================
+   OUTER CONTAINER
+========================================= */
+
+.certificate-containers {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.certificate-headings {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.certificate-headings h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.certificate-headings p {
+  font-size: 1rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CERTIFICATE CARD
+========================================= */
+
+.certificate-cards {
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  min-height: 220px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.certificate-cards:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  border-color: #dfe3e8;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.certificate-logos {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.certificate-logos img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  filter: grayscale(20%);
+
+  transition: filter 0.3s ease;
+}
+
+.certificate-cards:hover .certificate-logos img {
+  filter: grayscale(0%);
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.certificate-cards h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: #333;
+
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.animate-on-scroll {
+  opacity: 0;
+
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+
+  will-change: transform, opacity;
+}
+
+/* Top → Bottom */
+.animate-on-scroll.down {
+  transform: translateY(-60px);
+}
+
+/* Bottom → Top */
+.animate-on-scroll.up {
+  transform: translateY(60px);
+}
+
+/* Visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .certificate-containers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .certificate-sections {
+    padding: 60px 18px;
+  }
+
+  .certificate-containers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .certificate-headings h2 {
+    font-size: 1.6rem;
+  }
+
+  .certificate-headings p {
+    font-size: 0.85rem;
+  }
+
+  .certificate-sections::before {
+    width: 600px;
+    height: 600px;
+
+    left: -300px;
+    top: -150px;
+
+    filter: blur(70px);
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .certificate-containers {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-cards {
+    min-height: 180px;
+    padding: 20px 15px;
+  }
+
+  .certificate-logos {
+    width: 80px;
+    height: 80px;
+  }
+
+  .certificate-sections::before {
+    width: 500px;
+    height: 500px;
+
+    left: -280px;
+    top: -100px;
+
+    opacity: 0.18;
+  }
+
+}

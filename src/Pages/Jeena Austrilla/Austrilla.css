@@ -1,0 +1,1044 @@
+/* =========================================
+   MAIN AUSTRALIA / AUSTRALASIA SECTION
+========================================= */
+
+.Austrilla-pagess {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  position: relative;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.Austrilla-leftss {
+  width: 100%;
+  min-height: 650px;
+
+  background-image: url("https://images.pexels.com/photos/36983174/pexels-photo-36983174.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.Austrilla-overlayss {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(35, 29, 29, 0.53);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.Austrilla-contentss {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 8%;
+
+  color: white;
+}
+
+
+.Austrilla-contentss h1 {
+  font-size: 45px;
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   FORM BOX
+========================================= */
+
+.Austrilla-form-boxss {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 7%;
+  bottom: 40px;
+
+  width: 390px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.Austrilla-form-boxss h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.Austrilla-form-boxss > p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row-Austrilla,
+.form-rows-Austrilla {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   INPUT + SELECT
+========================================= */
+
+.form-row-Austrilla input,
+.form-rows-Austrilla input,
+.form-rows-Austrilla select {
+  width: 50%;
+
+  height: 45px;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.form-row-Austrilla input:focus,
+.form-rows-Austrilla input:focus,
+.form-rows-Austrilla select:focus {
+  background: #eeeeee;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.Austrilla-form-boxss textarea {
+  width: 100%;
+
+  height: 90px;
+
+  resize: none;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+
+  font-family: Arial, sans-serif;
+}
+
+
+.Austrilla-form-boxss textarea:focus {
+  background: #eeeeee;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.agreements-Door {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+
+  line-height: 1.4;
+}
+
+
+.agreements-Door input {
+  width: 17px;
+
+  height: 17px;
+
+  margin-top: 1px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.Austrilla-form-boxss button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #0783b3;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  border-radius: 2px;
+}
+
+
+.Austrilla-form-boxss button:hover {
+  background: #056b91;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .Austrilla-leftss {
+    width: 100%;
+  }
+
+
+  .Austrilla-contentss h1 {
+    font-size: 45px;
+  }
+
+
+  .Austrilla-form-boxss {
+    right: 4%;
+
+    width: 370px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .Austrilla-pagess {
+    min-height: auto;
+
+    padding-bottom: 0;
+
+    display: block;
+  }
+
+
+  .Austrilla-leftss {
+    width: 100%;
+
+    min-height: 600px;
+
+    align-items: flex-start;
+  }
+
+
+  .Austrilla-contentss {
+    padding: 80px 25px 0;
+  }
+
+
+  .Austrilla-contentss h1 {
+    font-size: 38px;
+
+    line-height: 1.15;
+  }
+
+
+  .Austrilla-form-boxss {
+    position: relative;
+
+    bottom: auto;
+
+    right: auto;
+
+    width: calc(100% - 30px);
+
+    margin: -180px auto 30px;
+
+    padding: 25px;
+
+    z-index: 10;
+  }
+
+
+  .form-row-Austrilla,
+  .form-rows-Austrilla {
+    display: block;
+
+    margin-bottom: 0;
+  }
+
+
+  .form-row-Austrilla input,
+  .form-rows-Austrilla input,
+  .form-rows-Austrilla select {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+
+  .Austrilla-form-boxss textarea {
+    margin-top: 0;
+  }
+
+
+  .agreements-Door {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .Austrilla-leftss {
+    min-height: 550px;
+  }
+
+
+  .Austrilla-contentss {
+    padding: 60px 20px 0;
+  }
+
+
+  .Austrilla-contentss h1 {
+    font-size: 30px;
+  }
+
+
+  .Austrilla-form-boxss {
+    width: calc(100% - 20px);
+
+    padding: 20px;
+
+    margin-top: -140px;
+  }
+
+
+  .Austrilla-form-boxss h2 {
+    font-size: 21px;
+  }
+}
+/* =========================================
+   OVERVIEW SECTION
+========================================= */
+
+.overview-section {
+  width: 100%;
+  background: #fff;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-container h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.overview-container h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #0783b3;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+.overview-container p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .overview-section {
+    padding: 60px 25px;
+  }
+
+  .overview-container h2 {
+    font-size: 36px;
+  }
+
+  .overview-container p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .overview-section {
+    padding: 50px 18px;
+  }
+
+  .overview-container h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .overview-container p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .overview-container h2 {
+    font-size: 26px;
+  }
+
+  .overview-container p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   COUNTRIES SECTION
+========================================= */
+
+.countries-section {
+  width: 100%;
+  min-height: 600px;
+  background: linear-gradient(
+    110deg,
+    #0879c9 0%,
+    #087fae 35%,
+    #008c88 65%,
+    #009b55 100%
+  );
+
+  overflow: hidden;
+  position: relative;
+}
+
+.countries-container {
+  max-width: 1200px;
+  min-height: 600px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 55px 30px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.countries-content {
+  width: 55%;
+  color: white;
+  z-index: 2;
+}
+
+.countries-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 160px 0;
+  line-height: 1.2;
+}
+
+.office-info {
+  margin-left: 5px;
+}
+
+.office-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.office-title h3 {
+  font-size: 23px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Location icon */
+
+.location-icon {
+  width: 17px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 20px;
+
+  position: relative;
+}
+
+.location-icon::after {
+  content: "";
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  background: white;
+  border-radius: 50%;
+
+  top: 6px;
+  left: 5px;
+}
+
+/* =========================================
+   OFFICE DETAILS
+========================================= */
+
+.office-details {
+  margin-left: 31px;
+}
+
+.office-details h4 {
+  margin: 0 0 5px 0;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.office-details p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-info {
+  margin-left: 31px;
+  margin-top: 40px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.contact-info strong {
+  font-weight: 700;
+}
+
+/* =========================================
+   AUSTRALIA MAP
+========================================= */
+
+.australia-map {
+  width: 45%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.australia-map img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .countries-container {
+    padding: 50px 25px;
+  }
+
+  .countries-content {
+    width: 52%;
+  }
+
+  .countries-content h2 {
+    font-size: 32px;
+    margin-bottom: 100px;
+  }
+
+  .australia-map {
+    width: 48%;
+  }
+
+  .office-title h3 {
+    font-size: 20px;
+  }
+
+  .office-details p,
+  .contact-info p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .countries-section {
+    min-height: auto;
+  }
+
+  .countries-container {
+    min-height: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 45px 25px;
+  }
+
+  .countries-content {
+    width: 100%;
+  }
+
+  .countries-content h2 {
+    font-size: 30px;
+    margin-bottom: 55px;
+  }
+
+  .office-info {
+    margin-left: 0;
+  }
+
+  .office-title {
+    gap: 12px;
+  }
+
+  .office-title h3 {
+    font-size: 21px;
+  }
+
+  .office-details {
+    margin-left: 29px;
+  }
+
+  .office-details p {
+    font-size: 15px;
+  }
+
+  .contact-info {
+    margin-left: 29px;
+    margin-top: 30px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+  }
+
+  .australia-map {
+    width: 100%;
+    margin-top: 45px;
+  }
+
+  .australia-map img {
+    width: 90%;
+    max-width: 450px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .countries-container {
+    padding: 35px 20px;
+  }
+
+  .countries-content h2 {
+    font-size: 26px;
+  }
+
+  .office-details p {
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .australia-map img {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   INDUSTRIES SECTION
+========================================= */
+
+.industries-section {
+  width: 100%;
+  padding: 35px 0 55px;
+
+  background: linear-gradient(
+    110deg,
+    #0878c9 0%,
+    #078db0 48%,
+    #009879 100%
+  );
+
+  color: #fff;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.industries-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.industries-header h2 {
+  margin: 0 0 18px;
+
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+
+.industries-header p {
+  max-width: 800px;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.industries-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 45px;
+  row-gap: 90px;
+
+  margin-top: 55px;
+}
+
+
+/* =========================================
+   ITEM
+========================================= */
+
+.industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition: transform 0.3s ease;
+}
+
+
+.industry-item:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+   IMAGE / ICON
+========================================= */
+
+.industry-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+
+.industry-icon img {
+  width: 45px;
+  height: 45px;
+
+  object-fit: contain;
+
+  /* Agar tumhari images already white hain */
+  filter: brightness(0) invert(1);
+
+  transition: transform 0.3s ease;
+}
+
+
+.industry-item:hover .industry-icon img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.industry-item h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .industries-container {
+    max-width: 750px;
+  }
+
+  .industries-header h2 {
+    font-size: 36px;
+  }
+
+  .industries-header p {
+    font-size: 17px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  .industry-item h3 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .industries-section {
+    padding: 40px 0 50px;
+  }
+
+  .industries-container {
+    padding: 0 25px;
+  }
+
+  .industries-header h2 {
+    font-size: 30px;
+  }
+
+  .industries-header p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .industries-grid {
+    margin-top: 40px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 25px;
+    row-gap: 45px;
+  }
+
+  .industry-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .industry-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .industry-item h3 {
+    font-size: 17px;
+    white-space: normal;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .industries-container {
+    padding: 0 20px;
+  }
+
+  .industries-header h2 {
+    font-size: 27px;
+  }
+
+  .industries-header p {
+    font-size: 15px;
+  }
+
+  .industries-grid {
+    column-gap: 15px;
+    row-gap: 40px;
+  }
+
+  .industry-item h3 {
+    font-size: 15px;
+  }
+}

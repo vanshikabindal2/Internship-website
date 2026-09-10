@@ -1,0 +1,296 @@
+/* =========================================
+   CONTACT BANNER
+========================================= */
+
+.contact-banner {
+  width: 100%;
+  min-height: 320px;
+
+  /* SOFT COLOR ONLY ON RIGHT SIDE */
+  background:
+    radial-gradient(
+      ellipse 55% 100% at 100% 50%,
+      rgba(8, 127, 194, 0.45) 0%,
+      rgba(0, 143, 123, 0.30) 45%,
+      rgba(0, 155, 78, 0.15) 70%,
+      transparent 100%
+    ),
+    #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SMALL PHOTO
+========================================= */
+
+.contact-banner-photo {
+  flex: 0 0 280px;
+  max-width: 280px;
+
+  opacity: 0;
+  animation: slideInLeft 0.9s ease forwards;
+}
+
+.contact-banner-photo img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+
+  border-radius: 12px;
+  display: block;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.contact-banner-photo:hover img {
+  transform: scale(1.05) rotate(-1deg);
+
+  box-shadow:
+    0 18px 40px rgba(36, 26, 143, 0.25);
+}
+
+
+/* =========================================
+   TEXT CONTENT
+========================================= */
+
+.contact-banner-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #1a1a2e;
+
+  opacity: 0;
+  animation: slideInRight 0.9s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.contact-banner-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin-bottom: 18px;
+
+  color: #1a1a2e;
+
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.5s;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.contact-banner-content p {
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #555;
+
+  margin-bottom: 26px;
+
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.7s;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.contact-banner-btn {
+  display: inline-block;
+  width: fit-content;
+
+  background: #087fc2;
+  color: #ffffff;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  padding: 14px 30px;
+
+  border-radius: 4px;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.9s;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   BUTTON SHINE EFFECT
+========================================= */
+
+.contact-banner-btn::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  transform: skewX(-20deg);
+
+  transition: left 0.5s ease;
+}
+
+.contact-banner-btn:hover::before {
+  left: 120%;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.contact-banner-btn:hover {
+  background: #008f7b;
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   BUTTON CLICK
+========================================= */
+
+.contact-banner-btn:active {
+  transform: translateY(0px) scale(0.97);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .contact-banner {
+    padding: 40px 20px;
+    gap: 30px;
+
+    /* SOFT RIGHT SIDE COLOR ON MOBILE */
+    background:
+      radial-gradient(
+        ellipse 80% 80% at 100% 50%,
+        rgba(8, 127, 194, 0.40) 0%,
+        rgba(0, 143, 123, 0.25) 40%,
+        rgba(0, 155, 78, 0.12) 65%,
+        transparent 100%
+      ),
+      #ffffff;
+  }
+
+
+  .contact-banner-photo {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+
+
+  .contact-banner-photo img {
+    height: 200px;
+  }
+
+
+  .contact-banner-content {
+    text-align: center;
+    align-items: center;
+  }
+
+
+  .contact-banner-content h2 {
+    font-size: 24px;
+  }
+
+
+  .contact-banner-content p {
+    font-size: 15px;
+  }
+}

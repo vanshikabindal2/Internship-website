@@ -1,0 +1,558 @@
+/* =========================
+   MAIN SECTION
+========================= */
+
+.project-pagess {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  position: relative;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.project-leftss {
+  width: 100%;
+  min-height: 650px;
+
+  background-image: url("https://images.pexels.com/photos/221322/pexels-photo-221322.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.project-overlayss {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(35, 29, 29, 0.534);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-contentss {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 8%;
+
+  color: white;
+}
+
+
+.project-contentss h1 {
+  font-size: 70px;
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+
+  font-weight: 800;
+}
+
+
+.project-contentss p {
+  font-size: 23px;
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  margin: 0;
+}
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.project-form-boxss {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 7%;
+  bottom: 40px;
+
+  width: 390px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   FORM HEADING
+========================= */
+
+.project-form-boxss h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.project-form-boxss > p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* =========================
+   FIRST FORM ROW
+========================= */
+
+.form-row-project {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   OTHER FORM ROWS
+========================= */
+
+.form-rows-project {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.form-row-project input,
+.form-rows-project input,
+.form-rows-project select {
+  width: 50%;
+
+  height: 45px;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.form-row-project input:focus,
+.form-rows-project input:focus,
+.form-rows-project select:focus {
+  background: #eeeeee;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.project-form-boxss textarea {
+  width: 100%;
+
+  height: 90px;
+
+  resize: none;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.agreements-project {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+
+  line-height: 1.4;
+}
+
+
+.agreements-project input {
+  width: 17px;
+
+  height: 17px;
+
+  margin-top: 1px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.project-form-boxss button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #0783b3;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.project-form-boxss button:hover {
+  background: #056b91;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .project-leftss {
+    width: 100%;
+  }
+
+
+  .project-contentss h1 {
+    font-size: 45px;
+  }
+
+
+  .project-contentss p {
+    font-size: 18px;
+  }
+
+
+  .project-form-boxss {
+    right: 4%;
+
+    width: 370px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .project-pagess {
+    min-height: auto;
+
+    padding-bottom: 0;
+
+    display: block;
+  }
+
+
+  .project-leftss {
+    width: 100%;
+
+    min-height: 600px;
+
+    align-items: flex-start;
+  }
+
+
+  .project-contentss {
+    padding: 80px 25px 0;
+  }
+
+
+  .project-contentss h1 {
+    font-size: 38px;
+  }
+
+
+  .project-contentss p {
+    font-size: 17px;
+  }
+
+
+  .project-form-boxss {
+    position: relative;
+
+    bottom: auto;
+    right: auto;
+
+    width: calc(100% - 30px);
+
+    margin: -180px auto 30px;
+
+    padding: 25px;
+
+    z-index: 10;
+  }
+
+
+  .form-row-project,
+  .form-rows-project {
+    display: block;
+  }
+
+
+  .form-row-project input,
+  .form-rows-project input,
+  .form-rows-project select {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+
+  .agreements-project {
+    font-size: 11px;
+  }
+
+}
+/* =========================
+   PROJECT FREIGHT SECTION
+========================= */
+
+.project-freight-sections {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 60px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   LEFT IMAGE
+========================= */
+
+.project-freight-images {
+  width: 48%;
+  height: 680px;
+  overflow: hidden;
+  border-radius: 0 40px 40px 0;
+}
+
+.project-freight-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.project-freight-contents {
+  width: 48%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.project-freight-contents h2 {
+  margin: 0 0 35px;
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #111;
+}
+
+.project-freight-contents p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #555;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .project-freight-sections {
+    padding: 50px 30px;
+    gap: 40px;
+  }
+
+  .project-freight-images {
+    height: 550px;
+  }
+
+  .project-freight-contents h2 {
+    font-size: 38px;
+  }
+
+  .project-freight-contents p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .project-freight-sections {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .project-freight-images {
+    width: 100%;
+    height: 400px;
+  }}
+  /* =========================
+   PROJECT SUPPLY CHAIN
+========================= */
+
+.Project-chain-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.Project-chain-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 45px;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-chain-image {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-chain-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .Project-chain-section {
+    padding: 45px 15px;
+  }
+
+  .Project-chain-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .Project-chain-section {
+    padding: 35px 10px;
+  }
+
+  .Project-chain-section h2 {
+    font-size: 25px;
+  }
+
+  .project-chain-image {
+    width: 100%;
+  }
+
+}

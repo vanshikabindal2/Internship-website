@@ -1,0 +1,1186 @@
+/* ==============================
+   CONTACT PAGE
+================================ */
+
+.contact-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.contact-hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  inset: 0;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.48);
+
+  z-index: 1;
+}
+
+.contact-hero-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  color: white;
+
+  z-index: 2;
+
+  width: 90%;
+}
+
+.contact-hero-content h1 {
+  font-size: 62px;
+  font-weight: 700;
+
+  margin: 0 0 15px;
+}
+
+.contact-hero-content p {
+  font-size: 26px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  margin: 0;
+}
+
+
+/* ==============================
+   CONTACT FORM SECTION
+================================ */
+
+.contact-form-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 80px 11%;
+
+  background: #fff;
+}
+
+
+/* ==============================
+   LEFT CONTENT
+================================ */
+
+.contact-left {
+  width: 45%;
+}
+
+.contact-left h2 {
+  font-size: 46px;
+
+  line-height: 1.12;
+
+  color: #101522;
+
+  margin-bottom: 25px;
+}
+
+.contact-left p {
+  font-size: 20px;
+
+  line-height: 1.5;
+
+  color: #243b55;
+
+  max-width: 570px;
+}
+
+
+/* ==============================
+   ARROWS
+================================ */
+
+.contact-arrows {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 50px;
+
+  margin-left: 360px;
+}
+
+.arrow {
+  font-size: 105px;
+
+  font-weight: 300;
+
+  line-height: 0;
+
+  transform: scaleX(0.65);
+
+}
+
+.arrow.blue {
+  color: #74afe0;
+}
+
+.arrow.green {
+  color: #75d0a9;
+
+  margin-left: -45px;
+}
+
+
+/* ==============================
+   FORM BOX
+================================ */
+
+.contact-form-box {
+  width: 48%;
+
+  background: #fff;
+
+  padding: 28px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  border-radius: 4px;
+}
+
+.contact-form-box h2 {
+  font-size: 28px;
+
+  color: #111827;
+
+  margin: 0 0 25px;
+}
+
+
+/* ==============================
+   FORM
+================================ */
+
+.contact-form-box form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+
+  gap: 16px;
+
+  margin-bottom: 18px;
+}
+
+.form-row input {
+  width: 50%;
+}
+
+
+/* Inputs */
+
+.contact-form-box input,
+.contact-form-box select,
+.contact-form-box textarea {
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: #f1f1f1;
+
+  padding: 17px 20px;
+
+  font-size: 16px;
+
+  color: #555;
+
+  font-family: inherit;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+
+/* Select */
+
+.contact-form-box select {
+  margin-bottom: 18px;
+
+  appearance: auto;
+}
+
+
+/* Textarea */
+
+.contact-form-box textarea {
+  height: 130px;
+
+  resize: none;
+
+  margin-bottom: 25px;
+}
+
+
+/* Placeholder */
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder {
+  color: #718096;
+}
+
+
+/* ==============================
+   BUTTON
+================================ */
+
+.contact-form-box button {
+
+  background: #0788c8;
+
+  color: white;
+
+  border: none;
+
+  padding: 18px 38px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contact-form-box button:hover {
+  background: #056fa5;
+
+  transform: translateY(-2px);
+}
+
+.contact-form-box button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* ==============================
+   STATUS
+================================ */
+
+.form-status {
+  margin-top: 18px;
+
+  font-size: 15px;
+
+  color: #0788c8;
+
+  font-weight: 600;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .contact-form-section {
+    padding: 60px 5%;
+
+    gap: 40px;
+  }
+
+  .contact-left h2 {
+    font-size: 38px;
+  }
+
+  .contact-left p {
+    font-size: 17px;
+  }
+
+  .contact-form-box {
+    width: 52%;
+  }
+
+  .contact-arrows {
+    margin-left: 200px;
+  }
+
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+  .contact-hero {
+    height: 480px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .contact-hero-content p {
+    font-size: 19px;
+  }
+
+
+  .contact-form-section {
+    flex-direction: column;
+
+    padding: 60px 25px;
+
+    gap: 50px;
+  }
+
+
+  .contact-left {
+    width: 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 34px;
+  }
+
+  .contact-left p {
+    font-size: 17px;
+  }
+
+
+  .contact-form-box {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 22px;
+  }
+
+
+  .form-row {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+
+
+  .contact-arrows {
+    margin-left: 50px;
+  }
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .contact-hero {
+    height: 420px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .contact-hero-content p {
+    font-size: 17px;
+  }
+
+  .contact-left h2 {
+    font-size: 29px;
+  }
+
+  .contact-form-section {
+    padding: 45px 18px;
+  }
+
+  .contact-form-box {
+    padding: 20px;
+  }
+
+  .contact-form-box h2 {
+    font-size: 25px;
+  }
+
+}
+
+/* map  */
+/* =====================================
+   OFFICES IN INDIA
+===================================== */
+
+.offices-section {
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 10%;
+
+  box-sizing: border-box;
+
+  /* Blue → Teal → Green Background */
+ background: linear-gradient(
+    90deg,
+    #087fc2,
+    #008f7b,
+    #009b4e
+  );
+
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   LEFT CONTENT
+===================================== */
+
+.offices-content {
+  width: 48%;
+  z-index: 2;
+}
+
+.offices-content h2 {
+  font-size: 46px;
+  font-weight: 700;
+
+  margin: 0 0 25px;
+
+  color: white;
+}
+
+.offices-content > p {
+  max-width: 570px;
+
+  font-size: 20px;
+  line-height: 1.6;
+
+  margin: 0 0 55px;
+
+  color: white;
+}
+
+
+/* =====================================
+   OFFICE DETAILS
+===================================== */
+
+.office-details h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 20px;
+
+  margin: 0 0 12px;
+
+  color: white;
+}
+
+.office-details h3 span {
+  font-size: 25px;
+}
+
+.office-details p {
+  font-size: 18px;
+
+  line-height: 1.75;
+
+  margin: 0;
+
+  color: white;
+}
+
+.office-details .contact-info {
+  margin-top: 22px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   INDIA MAP
+===================================== */
+
+.india-map {
+  width: 52%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.india-map img {
+  width: 90%;
+  max-width: 570px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  /* Soft effect like screenshot */
+  filter: brightness(1.05);
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .offices-section {
+    padding: 60px 5%;
+  }
+
+  .offices-content h2 {
+    font-size: 40px;
+  }
+
+  .offices-content > p {
+    font-size: 18px;
+  }
+
+  .office-details p {
+    font-size: 16px;
+  }
+
+  .india-map img {
+    width: 100%;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .offices-section {
+    flex-direction: column;
+
+    padding: 60px 25px;
+
+    text-align: left;
+  }
+
+  .offices-content {
+    width: 100%;
+  }
+
+  .offices-content h2 {
+    font-size: 36px;
+  }
+
+  .offices-content > p {
+    font-size: 17px;
+
+    margin-bottom: 40px;
+  }
+
+  .office-details p {
+    font-size: 16px;
+  }
+
+  .india-map {
+    width: 100%;
+
+    margin-top: 45px;
+  }
+
+  .india-map img {
+    width: 85%;
+    max-width: 450px;
+  }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .offices-section {
+    padding: 50px 20px;
+  }
+
+  .offices-content h2 {
+    font-size: 31px;
+  }
+
+  .offices-content > p {
+    font-size: 16px;
+  }
+
+  .office-details p {
+    font-size: 15px;
+  }
+
+  .india-map img {
+    width: 95%;
+  }
+}
+
+
+
+/* =====================================
+   OFFICE LOCATIONS
+===================================== */
+
+.office-locations {
+  width: 100%;
+  background: #fff;
+
+  padding: 85px 10%;
+
+  box-sizing: border-box;
+}
+
+
+/* Main 4 Columns */
+
+.locations-container {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 70px;
+
+  row-gap: 0;
+}
+
+
+/* Each Column */
+
+.location-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+
+/* Location Item */
+
+.location-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #171b25;
+
+  white-space: nowrap;
+}
+
+
+/* Diamond Icon */
+
+.location-item span {
+  font-size: 15px;
+
+  color: #008bb8;
+
+  transform: rotate(45deg);
+
+  display: inline-block;
+}
+
+
+/* =====================================
+   BOTTOM GRADIENT
+===================================== */
+
+.office-bottom-gradient {
+  width: 100%;
+
+  height: 75px;
+
+  background: linear-gradient(
+    110deg,
+    #0878c9 0%,
+    #008c9a 50%,
+    #009b4d 100%
+  );
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .office-locations {
+    padding: 70px 5%;
+  }
+
+  .locations-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px 60px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .office-locations {
+    padding: 55px 25px;
+  }
+
+  .locations-container {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .location-column {
+    gap: 20px;
+
+    margin-bottom: 20px;
+  }
+
+  .location-item {
+    font-size: 15px;
+  }
+
+  .office-bottom-gradient {
+    height: 55px;
+  }
+
+}
+
+/* =====================================
+   OFFICE IN AUSTRALIA
+===================================== */
+
+.australia-office {
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 10%;
+
+  box-sizing: border-box;
+
+  /* background: linear-gradient(
+    110deg,
+    #0878c9 0%,
+    #008d9a 50%,
+    #009b4d 100%
+  ); */
+background: linear-gradient(
+    90deg,
+    #087fc2,
+    #008f7b,
+    #009b4e
+  );
+
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   LEFT MAP
+===================================== */
+
+.australia-map {
+  width: 52%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.australia-map img {
+  width: 90%;
+  max-width: 600px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =====================================
+   RIGHT CONTENT
+===================================== */
+
+.australia-content {
+  width: 48%;
+
+  padding-left: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.australia-content h2 {
+  font-size: 46px;
+
+  font-weight: 700;
+
+  margin: 0 0 25px;
+
+  color: white;
+}
+
+
+/* Description */
+
+.australia-description {
+  max-width: 540px;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+
+  margin: 0 0 55px;
+
+  color: white;
+}
+
+
+/* =====================================
+   OFFICE DETAILS
+===================================== */
+
+.australia-details h3 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 20px;
+
+  margin: 0 0 12px;
+
+  color: white;
+}
+
+
+/* Location icon */
+
+.location-icon {
+  width: 18px;
+  height: 18px;
+
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+
+  color: white;
+}
+
+
+/* Address */
+
+.australia-details > p {
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin: 0 0 40px;
+
+  padding-left: 30px;
+
+  color: white;
+}
+
+
+/* =====================================
+   PHONE + EMAIL
+===================================== */
+
+.australia-contact {
+  padding-left: 30px;
+}
+
+.australia-contact p {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: white;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .australia-office {
+    padding: 60px 5%;
+  }
+
+  .australia-content {
+    padding-left: 15px;
+  }
+
+  .australia-content h2 {
+    font-size: 40px;
+  }
+
+  .australia-description {
+    font-size: 18px;
+  }
+
+  .australia-details > p,
+  .australia-contact p {
+    font-size: 16px;
+  }
+
+  .australia-map img {
+    width: 100%;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .australia-office {
+    flex-direction: column;
+
+    padding: 60px 25px;
+
+    text-align: left;
+  }
+
+  .australia-map {
+    width: 100%;
+
+    order: 1;
+
+    margin-bottom: 40px;
+  }
+
+  .australia-map img {
+    width: 85%;
+
+    max-width: 450px;
+  }
+
+  .australia-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    order: 2;
+  }
+
+  .australia-content h2 {
+    font-size: 36px;
+  }
+
+  .australia-description {
+    font-size: 17px;
+
+    margin-bottom: 40px;
+  }
+
+  .australia-details > p {
+    font-size: 16px;
+
+    padding-left: 0;
+  }
+
+  .australia-contact {
+    padding-left: 0;
+  }
+
+  .australia-contact p {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .australia-office {
+    padding: 50px 20px;
+  }
+
+  .australia-map img {
+    width: 95%;
+  }
+
+  .australia-content h2 {
+    font-size: 31px;
+  }
+
+  .australia-description {
+    font-size: 16px;
+  }
+
+  .australia-details > p,
+  .australia-contact p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =====================================
+   TEAM PHOTO SECTION
+===================================== */
+
+.team-photo-section {
+  width: 100%;
+  height: 650px;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .team-photo-section {
+    height: 550px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .team-photo-section {
+    height: 400px;
+  }
+
+  .team-photo {
+    object-position: center;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .team-photo-section {
+    height: 320px;
+  }
+
+}

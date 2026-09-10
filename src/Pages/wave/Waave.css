@@ -1,0 +1,661 @@
+/* =========================================================
+   JEENA & COMPANY
+   PREMIUM THIN WATER + MOVING SHIP
+========================================================= */
+
+.jc-wave-wrap {
+  position: relative;
+  width: 100%;
+  height: 115px;
+  overflow: hidden;
+  background: #ffffff;
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   COMMON WAVE
+========================================================= */
+
+.jc-wave {
+  position: absolute;
+  left: -3%;
+  width: 106%;
+  pointer-events: none;
+}
+
+.jc-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   BACK WAVE
+========================================================= */
+
+.jc-wave-1 {
+  bottom: 0;
+  height: 58px;
+
+  z-index: 1;
+
+  opacity: 0.18;
+
+  animation: jcWaveOne 8s ease-in-out infinite;
+}
+
+.jc-wave-1 path {
+  fill: #087fc2;
+}
+
+
+/* =========================================================
+   FRONT WAVE
+========================================================= */
+
+.jc-wave-2 {
+  bottom: -1px;
+  height: 43px;
+
+  z-index: 3;
+
+  opacity: 0.30;
+
+  animation: jcWaveTwo 6s ease-in-out infinite;
+}
+
+.jc-wave-2 path {
+  fill: #24b7d3;
+}
+
+
+/* =========================================================
+   BACK WAVE MOVEMENT
+========================================================= */
+
+@keyframes jcWaveOne {
+
+  0% {
+    transform: translateX(-1.5%);
+  }
+
+  50% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-1.5%);
+  }
+
+}
+
+
+/* =========================================================
+   FRONT WAVE MOVEMENT
+========================================================= */
+
+@keyframes jcWaveTwo {
+
+  0% {
+    transform: translateX(1%);
+  }
+
+  50% {
+    transform: translateX(-1%);
+  }
+
+  100% {
+    transform: translateX(1%);
+  }
+
+}
+
+
+/* =========================================================
+   MOVING SHIP
+========================================================= */
+
+.jc-ship {
+  position: absolute;
+
+  width: 255px;
+  height: 115px;
+
+  left: -290px;
+  bottom: 23px;
+
+  z-index: 5;
+
+  animation:
+    jcShipMove 18s linear infinite,
+    jcShipFloat 3.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SHIP SVG
+========================================================= */
+
+.jc-ship-svg {
+  position: absolute;
+
+  width: 255px;
+  height: auto;
+
+  left: 0;
+  top: 0;
+
+  filter:
+    drop-shadow(
+      0 7px 7px rgba(0, 35, 55, 0.20)
+    );
+}
+
+
+/* =========================================================
+   SHIP LEFT → RIGHT
+========================================================= */
+
+@keyframes jcShipMove {
+
+  0% {
+    left: -290px;
+  }
+
+  100% {
+    left: calc(100% + 40px);
+  }
+
+}
+
+
+/* =========================================================
+   NATURAL SHIP FLOAT
+========================================================= */
+
+@keyframes jcShipFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  25% {
+    transform:
+      translateY(-2px)
+      rotate(-0.35deg);
+  }
+
+  50% {
+    transform:
+      translateY(1px)
+      rotate(0.3deg);
+  }
+
+  75% {
+    transform:
+      translateY(-1px)
+      rotate(-0.2deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   SHIP WAKE
+========================================================= */
+
+.jc-wake {
+  position: absolute;
+
+  left: -20px;
+  bottom: 13px;
+
+  width: 145px;
+  height: 35px;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* Individual wake lines */
+
+.jc-wake span {
+  position: absolute;
+
+  left: 0;
+
+  display: block;
+
+  height: 3px;
+
+  border-radius: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(72, 205, 231, 0.45),
+      transparent
+    );
+
+  filter: blur(1px);
+
+  animation:
+    jcWake 1.7s ease-in-out infinite;
+}
+
+
+/* Wake line 1 */
+
+.jc-wake span:nth-child(1) {
+  width: 125px;
+  top: 8px;
+}
+
+
+/* Wake line 2 */
+
+.jc-wake span:nth-child(2) {
+  width: 90px;
+  top: 18px;
+
+  animation-delay: 0.25s;
+}
+
+
+/* Wake line 3 */
+
+.jc-wake span:nth-child(3) {
+  width: 55px;
+  top: 28px;
+
+  animation-delay: 0.45s;
+}
+
+
+/* Wake animation */
+
+@keyframes jcWake {
+
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scaleX(0.7);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scaleX(1);
+  }
+
+}
+
+
+/* =========================================================
+   FRONT FOAM
+========================================================= */
+
+.jc-front-foam {
+  position: absolute;
+
+  right: -5px;
+  bottom: 13px;
+
+  width: 70px;
+  height: 30px;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+
+/* Foam bubbles */
+
+.jc-front-foam i {
+  position: absolute;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255, 255, 255, 0.9),
+      rgba(130, 230, 245, 0.45),
+      transparent 70%
+    );
+
+  filter: blur(2px);
+
+  animation:
+    jcFoam 1.3s ease-in-out infinite;
+}
+
+
+/* Foam 1 */
+
+.jc-front-foam i:nth-child(1) {
+  width: 48px;
+  height: 8px;
+
+  right: 0;
+  top: 12px;
+}
+
+
+/* Foam 2 */
+
+.jc-front-foam i:nth-child(2) {
+  width: 28px;
+  height: 6px;
+
+  right: 25px;
+  top: 5px;
+
+  animation-delay: 0.25s;
+}
+
+
+/* Foam animation */
+
+@keyframes jcFoam {
+
+  0%,
+  100% {
+    transform: scaleX(0.7);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: scaleX(1.15);
+    opacity: 0.9;
+  }
+
+}
+
+
+/* =========================================================
+   WATER LIGHT SHINE
+========================================================= */
+
+.jc-water-shine {
+  position: absolute;
+
+  left: -15%;
+  bottom: 17px;
+
+  width: 180px;
+  height: 2px;
+
+  z-index: 6;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.85),
+      transparent
+    );
+
+  filter: blur(0.5px);
+
+  animation:
+    jcShine 8s linear infinite;
+}
+
+
+/* Shine movement */
+
+@keyframes jcShine {
+
+  0% {
+    left: -15%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  80% {
+    opacity: 0.4;
+  }
+
+  100% {
+    left: 115%;
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SUBTLE WATER GLOW
+========================================================= */
+
+.jc-wave-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 2px;
+
+  width: 45%;
+  height: 18px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(38, 190, 220, 0.16),
+      transparent 70%
+    );
+
+  filter: blur(12px);
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .jc-wave-wrap {
+    height: 120px;
+  }
+
+  .jc-wave-1 {
+    height: 60px;
+  }
+
+  .jc-wave-2 {
+    height: 45px;
+  }
+
+  .jc-ship {
+    width: 270px;
+    height: 120px;
+
+    bottom: 24px;
+  }
+
+  .jc-ship-svg {
+    width: 270px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .jc-wave-wrap {
+    height: 105px;
+  }
+
+  .jc-wave-1 {
+    height: 52px;
+  }
+
+  .jc-wave-2 {
+    height: 38px;
+  }
+
+  .jc-ship {
+    width: 225px;
+    height: 105px;
+
+    bottom: 21px;
+  }
+
+  .jc-ship-svg {
+    width: 225px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .jc-wave-wrap {
+    height: 85px;
+  }
+
+
+  /* thinner wave */
+
+  .jc-wave-1 {
+    height: 43px;
+    opacity: 0.15;
+  }
+
+  .jc-wave-2 {
+    height: 32px;
+    opacity: 0.25;
+  }
+
+
+  /* smaller ship */
+
+  .jc-ship {
+    width: 185px;
+    height: 90px;
+
+    bottom: 16px;
+
+    animation:
+      jcShipMoveMobile 14s linear infinite,
+      jcShipFloat 3s ease-in-out infinite;
+  }
+
+  .jc-ship-svg {
+    width: 185px;
+  }
+
+
+  /* smaller wake */
+
+  .jc-wake {
+    left: -12px;
+    bottom: 10px;
+
+    width: 100px;
+  }
+
+  .jc-wake span:nth-child(1) {
+    width: 90px;
+  }
+
+  .jc-wake span:nth-child(2) {
+    width: 65px;
+  }
+
+  .jc-wake span:nth-child(3) {
+    width: 40px;
+  }
+
+
+  /* mobile ship movement */
+
+  @keyframes jcShipMoveMobile {
+
+    0% {
+      left: -210px;
+    }
+
+    100% {
+      left: calc(100% + 30px);
+    }
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .jc-wave-wrap {
+    height: 75px;
+  }
+
+  .jc-wave-1 {
+    height: 38px;
+  }
+
+  .jc-wave-2 {
+    height: 28px;
+  }
+
+  .jc-ship {
+    width: 155px;
+    height: 78px;
+
+    bottom: 12px;
+  }
+
+  .jc-ship-svg {
+    width: 155px;
+  }
+
+  .jc-front-foam {
+    transform: scale(0.75);
+    transform-origin: right center;
+  }
+
+}

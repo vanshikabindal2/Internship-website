@@ -1,0 +1,631 @@
+/* ==================================================
+   MAIN CUSTOM PROJECT SECTION
+================================================== */
+
+.custom-pagess {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  position: relative;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+
+/* ==================================================
+   LEFT SIDE
+================================================== */
+
+.custom-leftss {
+  width: 100%;
+  min-height: 650px;
+
+  background-image: url("https://images.unsplash.com/photo-1612550761236-e813928f7271?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* ==================================================
+   OVERLAY
+================================================== */
+
+.custom-overlayss {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(35, 29, 29, 0.53);
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.custom-contentss {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 8%;
+
+  color: white;
+}
+
+
+.custom-contentss h1 {
+  font-size: 70px;
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+
+  font-weight: 800;
+}
+
+
+.custom-contentss p {
+  font-size: 23px;
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  margin: 0;
+}
+
+
+/* ==================================================
+   FORM BOX
+================================================== */
+
+.custom-form-boxss {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 7%;
+  bottom: 40px;
+
+  width: 390px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==================================================
+   FORM HEADING
+================================================== */
+
+.custom-form-boxss h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.custom-form-boxss > p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* ==================================================
+   FORM ROW
+================================================== */
+
+.form-row-custom,
+.form-rows-Door {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* ==================================================
+   INPUT + SELECT
+================================================== */
+
+.form-row-custom input,
+.form-rows-Door input,
+.form-rows-Door select {
+  width: 50%;
+
+  height: 45px;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+
+/* ==================================================
+   FOCUS
+================================================== */
+
+.form-row-custom input:focus,
+.form-rows-Door input:focus,
+.form-rows-Door select:focus {
+  background: #eeeeee;
+}
+
+
+/* ==================================================
+   TEXTAREA
+================================================== */
+
+.custom-form-boxss textarea {
+  width: 100%;
+
+  height: 90px;
+
+  resize: none;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+
+.custom-form-boxss textarea:focus {
+  background: #eeeeee;
+}
+
+
+/* ==================================================
+   CHECKBOX
+================================================== */
+
+.agreements-Door {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+
+  line-height: 1.4;
+}
+
+
+.agreements-Door input {
+  width: 17px;
+
+  height: 17px;
+
+  margin-top: 1px;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.custom-form-boxss button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #0783b3;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.custom-form-boxss button:hover {
+  background: #056b91;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .custom-leftss {
+    width: 100%;
+  }
+
+
+  .custom-contentss h1 {
+    font-size: 45px;
+  }
+
+
+  .custom-contentss p {
+    font-size: 18px;
+  }
+
+
+  .custom-form-boxss {
+    right: 4%;
+
+    width: 370px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .custom-pagess {
+    min-height: auto;
+
+    padding-bottom: 0;
+
+    display: block;
+  }
+
+
+  .custom-leftss {
+    width: 100%;
+
+    min-height: 600px;
+
+    align-items: flex-start;
+  }
+
+
+  .custom-contentss {
+    padding: 80px 25px 0;
+  }
+
+
+  .custom-contentss h1 {
+    font-size: 38px;
+  }
+
+
+  .custom-contentss p {
+    font-size: 17px;
+  }
+
+
+  .custom-form-boxss {
+    position: relative;
+
+    bottom: auto;
+    right: auto;
+
+    width: calc(100% - 30px);
+
+    margin: -180px auto 30px;
+
+    padding: 25px;
+
+    z-index: 10;
+  }
+
+
+  .form-row-custom,
+  .form-rows-Door {
+    display: block;
+  }
+
+
+  .form-row-custom input,
+  .form-rows-Door input,
+  .form-rows-Door select {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+
+  .agreements-Door {
+    font-size: 11px;
+  }
+}
+
+
+/* ==================================================
+   CUSTOM FREIGHT / ABOUT SECTION
+================================================== */
+
+.custom-freight-sections {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 70px 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 80px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==================================================
+   LEFT IMAGE
+================================================== */
+
+.custom-freight-images {
+  width: 48%;
+
+  height: 680px;
+
+  overflow: hidden;
+
+  border-radius: 0 40px 40px 0;
+}
+
+
+.custom-freight-images img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ==================================================
+   RIGHT CONTENT
+================================================== */
+
+.custom-freight-contents {
+  width: 48%;
+
+  padding-right: 20px;
+
+  box-sizing: border-box;
+}
+
+
+.custom-freight-contents h2 {
+  margin: 0 0 35px;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #111;
+}
+
+
+.custom-freight-contents p {
+  margin: 0 0 28px;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  color: #555;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .custom-freight-sections {
+    padding: 50px 30px;
+
+    gap: 40px;
+  }
+
+
+  .custom-freight-images {
+    height: 550px;
+  }
+
+
+  .custom-freight-contents h2 {
+    font-size: 38px;
+  }
+
+
+  .custom-freight-contents p {
+    font-size: 15px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .custom-freight-sections {
+    flex-direction: column;
+
+    padding: 40px 20px;
+
+    gap: 40px;
+  }
+
+
+  .custom-freight-images {
+    width: 100%;
+
+    height: 400px;
+
+    border-radius: 0 25px 25px 0;
+  }
+
+
+  .custom-freight-contents {
+    width: 100%;
+
+    padding-right: 0;
+  }
+
+
+  .custom-freight-contents h2 {
+    font-size: 32px;
+  }
+
+
+  .custom-freight-contents p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* ==================================================
+   SUPPLY CHAIN SECTION
+================================================== */
+
+.custom-chain-section {
+  width: 100%;
+
+  padding: 60px 20px;
+
+  background: #fff;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.custom-chain-section h2 {
+  font-size: 38px;
+
+  font-weight: 600;
+
+  color: #111;
+
+  margin: 0 0 45px;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.custom-chain-image {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+.custom-chain-image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* ==================================================
+   TABLET / MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .custom-chain-section {
+    padding: 45px 15px;
+  }
+
+
+  .custom-chain-section h2 {
+    font-size: 30px;
+
+    margin-bottom: 30px;
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+  .custom-chain-section {
+    padding: 35px 10px;
+  }
+
+
+  .custom-chain-section h2 {
+    font-size: 25px;
+  }
+
+
+  .custom-chain-image {
+    width: 100%;
+  }
+}

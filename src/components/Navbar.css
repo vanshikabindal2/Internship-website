@@ -1,0 +1,941 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  width: 100%;
+  height: 88px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 2.5%;
+
+  /* WHITE BACKGROUND */
+  background: #ffffff;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-menu {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+
+  margin-left: 10px;
+}
+
+
+/* =====================================================
+   NORMAL NAV LINKS
+===================================================== */
+
+.navbar-menu > a {
+  height: 100%;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1e293b;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+
+/* NORMAL LINK HOVER */
+
+.navbar-menu > a:hover {
+  color: #087fc2;
+
+  background: rgba(8, 127, 194, 0.06);
+}
+
+
+/* =====================================================
+   DROPDOWN PARENT
+===================================================== */
+
+.nav-dropdown {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: static;
+}
+
+
+/* =====================================================
+   DROPDOWN BUTTON
+===================================================== */
+
+.nav-dropdown-btn {
+  height: 100%;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #1e293b;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   DROPDOWN BUTTON HOVER (DESKTOP ONLY)
+===================================================== */
+
+@media (min-width: 901px) {
+  .nav-dropdown:hover .nav-dropdown-btn,
+  .nav-dropdown.dropdown-active .nav-dropdown-btn {
+    color: #087fc2;
+
+    background: rgba(8, 127, 194, 0.08);
+  }
+}
+
+.nav-dropdown.dropdown-active .nav-dropdown-btn {
+  color: #087fc2;
+
+  background: rgba(8, 127, 194, 0.08);
+}
+
+
+/* ARROW */
+
+.nav-dropdown-btn svg {
+  font-size: 11px;
+
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-btn svg,
+.nav-dropdown.dropdown-active .nav-dropdown-btn svg {
+  transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   MEGA MENU COMMON (DESKTOP BEHAVIOUR)
+===================================================== */
+
+.mega-menu {
+  position: absolute;
+
+  top: 88px;
+  left: 0;
+
+  width: 100%;
+
+  /* BLUE TO GREEN GRADIENT */
+  background: linear-gradient(
+    120deg,
+    #8fc3e8 0%,
+    #087fc2 38%,
+    #008f7b 70%,
+    #009b4e 100%
+  );
+
+  border-radius: 0 0 16px 16px;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-15px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0.28s ease;
+}
+
+
+/* OPEN DROPDOWN — DESKTOP: hover works fine here */
+
+@media (min-width: 901px) {
+  .nav-dropdown:hover .mega-menu,
+  .nav-dropdown.dropdown-active .mega-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+}
+
+/* OPEN DROPDOWN — CLASS BASED (works for both, needed for JS toggle) */
+.nav-dropdown.dropdown-active .mega-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
+}
+
+
+/* =====================================================
+   SERVICES MENU
+===================================================== */
+
+.services-menu {
+  padding: 32px 4% 36px;
+}
+
+
+/* INNER GRID */
+
+.mega-inner {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 50px;
+}
+
+
+/* =====================================================
+   SERVICE TITLE
+===================================================== */
+
+.service-column h3 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px 45px;
+}
+
+
+/* =====================================================
+   SERVICE CARDS
+===================================================== */
+
+.service-grid a,
+.supply-grid a {
+  min-height: 58px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+  color: #202631;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+
+.service-grid a:hover,
+.supply-grid a:hover {
+  transform: translateY(-4px);
+
+  background: #f8fbff;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ARROWS */
+
+.service-grid a svg,
+.supply-grid a svg {
+  color: #087fc2;
+
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.service-grid a:hover svg,
+.supply-grid a:hover svg {
+  transform: translateX(7px);
+}
+
+
+/* =====================================================
+   SUPPLY GRID
+===================================================== */
+
+.supply-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 15px;
+}
+
+
+/* =====================================================
+   VIEW ALL SERVICES
+===================================================== */
+
+.supply-grid .view-services {
+  justify-content: center;
+
+  gap: 15px;
+
+  background: #ffffff;
+
+  color: #087fc2;
+}
+
+
+.supply-grid .view-services svg {
+  color: #087fc2;
+}
+
+
+.supply-grid .view-services:hover {
+  background: #f2f9ff;
+}
+
+
+/* =====================================================
+   MEDIA MENU
+===================================================== */
+
+.media-menu {
+  padding: 42px 10% 45px;
+}
+
+
+/* =====================================================
+   MEDIA GRID
+===================================================== */
+
+.media-inner {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   MEDIA CARD
+===================================================== */
+
+.media-card {
+  padding: 14px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  min-width: 0;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+
+.media-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* =====================================================
+   MEDIA IMAGE
+===================================================== */
+
+.media-image {
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  margin-bottom: 20px;
+
+  background: #eeeeee;
+}
+
+
+.media-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+.media-card:hover .media-image img {
+  transform: scale(1.07);
+}
+
+
+/* =====================================================
+   MEDIA TITLE
+===================================================== */
+
+.media-card h3 {
+  margin: 0 0 10px;
+
+  color: #172b4d;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   MEDIA TEXT
+===================================================== */
+
+.media-card p {
+  margin: 0;
+
+  color: #4d5868;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   MEDIA LINK
+===================================================== */
+
+.media-card > a {
+  margin-top: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #087fc2;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.media-card > a svg {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.media-card > a:hover svg {
+  transform: translateX(7px);
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.navbar-right {
+  height: 100%;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   CUSTOMER PORTAL
+===================================================== */
+
+.portal {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #1e293b;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+
+.portal svg {
+  font-size: 18px;
+
+  color: #087fc2;
+}
+
+
+.portal:hover {
+  color: #087fc2;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CONTACT US BUTTON
+===================================================== */
+
+.contact-navbar {
+  height: 54px;
+
+  min-width: 130px;
+
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* SAME BLUE GREEN GRADIENT */
+  background: linear-gradient(
+    90deg,
+    #087fc2,
+    #008f7b,
+    #009b4e
+  );
+
+  border: none;
+
+  border-radius: 5px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+.contact-navbar:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 9px 22px rgba(0, 120, 130, 0.3);
+}
+
+
+/* =====================================================
+   MOBILE TOGGLE
+===================================================== */
+
+.mobile-toggle {
+  display: none;
+
+  margin-left: auto;
+
+  border: none;
+  background: transparent;
+
+  color: #1e293b;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1250px) {
+
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .navbar-logo {
+    width: 160px;
+  }
+
+  .navbar-logo img {
+    width: 130px;
+  }
+
+  .navbar-menu > a,
+  .nav-dropdown-btn {
+    padding: 0 10px;
+
+    font-size: 14px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .portal span {
+    display: none;
+  }
+
+  .contact-navbar {
+    min-width: 110px;
+
+    padding: 0 18px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: 75px;
+
+    padding: 0 22px;
+  }
+
+  .navbar-logo {
+    width: auto;
+  }
+
+  .navbar-logo img {
+    width: 130px;
+  }
+
+
+  /* HIDE DESKTOP RIGHT SIDE */
+
+  .navbar-right {
+    display: none;
+  }
+
+
+  /* SHOW MOBILE BUTTON */
+
+  .mobile-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* MOBILE NAV */
+
+  .navbar-menu {
+    position: absolute;
+
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    max-height: calc(100vh - 75px);
+
+    overflow-y: auto;
+
+    padding: 10px 20px 25px;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    background: #ffffff;
+
+    gap: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+
+  .navbar-menu.mobile-active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* MOBILE LINKS */
+
+  .navbar-menu > a,
+  .nav-dropdown-btn {
+    width: 100%;
+    height: 54px;
+
+    padding: 0 10px;
+
+    /* FIX: text ab center me, valid property (pehle "flex" adhura tha) */
+    justify-content: center;
+
+    color: #1e293b;
+
+    font-size: 16px;
+  }
+
+
+  .nav-dropdown {
+    height: auto;
+
+    display: block;
+
+    width: 100%;
+  }
+
+
+  /* FIX: Service / Media button ka text center, arrow absolute right pe.
+     Ab dono normal links jaisa hi center dikhenge. */
+  .nav-dropdown-btn {
+    position: relative;
+
+    justify-content: center;
+  }
+
+  .nav-dropdown-btn svg {
+    position: absolute;
+    right: 10px;
+  }
+
+
+  /* =====================================================
+     MOBILE DROPDOWN — sirf class se control, :hover NAHI
+     Ye hi asli fix hai "arrow pe click karne se band nahi ho raha" wale issue ka
+  ===================================================== */
+
+  .mega-menu {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+
+    display: none;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+
+    pointer-events: auto;
+
+    border-radius: 10px;
+
+    box-shadow: none;
+  }
+
+
+  /* Sirf .dropdown-active class dropdown kholegi/band karegi.
+     :hover ka koi role nahi mobile/touch devices par. */
+  .nav-dropdown.dropdown-active .mega-menu {
+    display: block;
+  }
+
+
+  .services-menu {
+    padding: 20px 15px;
+  }
+
+
+  .mega-inner {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .service-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .media-menu {
+    padding: 20px 15px;
+  }
+
+
+  .media-inner {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .media-image {
+    height: 180px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-logo img {
+    width: 120px;
+  }
+
+  .mobile-toggle {
+    font-size: 23px;
+  }
+
+  .media-card {
+    padding: 10px;
+  }
+}
+
+
+.navbar-menu > a,
+.nav-dropdown-btn a {
+  color: #1d2733 !important;
+  text-decoration: none;
+}
+
+.navbar-menu > a:visited,
+.nav-dropdown-btn a:visited {
+  color: #1d2733 !important;
+}

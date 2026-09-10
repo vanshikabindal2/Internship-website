@@ -1,0 +1,2281 @@
+/* =========================================================
+   MEDIA PAGE
+========================================================= */
+
+.media-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #071923;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.media-hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND VIDEO
+========================================================= */
+
+.media-hero > video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+
+  transform: scale(1.08);
+
+  animation: mediaVideoZoom 12s ease-out forwards;
+}
+
+
+@keyframes mediaVideoZoom {
+
+  0% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.media-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 19, 28, 0.92) 0%,
+      rgba(4, 19, 28, 0.72) 42%,
+      rgba(4, 19, 28, 0.38) 75%,
+      rgba(4, 19, 28, 0.20) 100%
+    );
+
+  animation: overlayFade 1.5s ease forwards;
+}
+
+
+@keyframes overlayFade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MEDIA CONTENT
+========================================================= */
+
+.media-content {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 8%;
+  padding-right: 8%;
+
+  color: #ffffff;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.media-content h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 115px);
+
+  line-height: 0.9;
+
+  font-weight: 700;
+
+  letter-spacing: -4px;
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  animation:
+    mediaHeadingReveal
+    1.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  animation-delay: 0.35s;
+}
+
+
+@keyframes mediaHeadingReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.media-line {
+  width: 0;
+
+  height: 2px;
+
+  margin: 35px 0 25px;
+
+  background: #61c9ed;
+
+  animation:
+    mediaLineReveal
+    1s
+    ease
+    forwards;
+
+  animation-delay: 1s;
+}
+
+
+@keyframes mediaLineReveal {
+
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 90px;
+  }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.media-content p {
+  max-width: 680px;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  opacity: 0;
+
+  animation:
+    mediaTextReveal
+    1s
+    ease
+    forwards;
+
+  animation-delay: 1.2s;
+}
+
+
+@keyframes mediaTextReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   SUBTLE SIDE DETAIL
+========================================================= */
+
+.media-content::before {
+  content: "MEDIA";
+
+  position: absolute;
+
+  left: 2.5%;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-90deg);
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  opacity: 0;
+
+  animation:
+    sideTextReveal
+    1s
+    ease
+    forwards;
+
+  animation-delay: 1.5s;
+}
+
+
+@keyframes sideTextReveal {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(-50%)
+      rotate(-90deg)
+      translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(-50%)
+      rotate(-90deg)
+      translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   HOVER / VIDEO EFFECT
+========================================================= */
+
+.media-hero:hover > video {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .media-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .media-content h1 {
+    font-size: clamp(55px, 10vw, 85px);
+  }
+
+  .media-content p {
+    max-width: 600px;
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .media-hero {
+    height: 100svh;
+  }
+
+
+  .media-hero > video {
+    height: 100svh;
+
+    object-position: center;
+  }
+
+
+  .media-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 19, 28, 0.94) 0%,
+        rgba(4, 19, 28, 0.72) 100%
+      );
+  }
+
+
+  .media-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+
+  .media-content h1 {
+    font-size: 56px;
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+  }
+
+
+  .media-line {
+    margin: 28px 0 22px;
+  }
+
+
+  .media-content p {
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .media-content::before {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .media-content h1 {
+    font-size: 48px;
+  }
+
+
+  .media-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .media-hero > video,
+  .media-overlay,
+  .media-content h1,
+  .media-line,
+  .media-content p,
+  .media-content::before {
+
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+
+  .media-content h1,
+  .media-content p,
+  .media-content::before {
+
+    opacity: 1;
+  }
+
+
+  .media-hero > video {
+    transform: none;
+  }
+
+
+  .media-line {
+    width: 90px;
+  }
+
+}
+
+
+
+/* overview */
+
+/* =========================================================
+   MEDIA OVERVIEW
+========================================================= */
+
+.media-overview {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 700px;
+
+  padding: 110px 8%;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  background: #f5f8fa;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT TEXT
+========================================================= */
+
+.ovrview-text {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 600px;
+
+  animation:
+    overviewTextReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+@keyframes overviewTextReveal {
+
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   OVERVIEW LABEL
+========================================================= */
+
+.overview-label {
+
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  color: #157cb4;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  animation:
+    overviewLabelReveal
+    0.8s
+    ease
+    forwards;
+
+  animation-delay: 0.25s;
+}
+
+
+@keyframes overviewLabelReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.ovrview-text h2 {
+
+  margin: 0 0 28px;
+
+  color: #172b3a;
+
+  font-size: clamp(38px, 4vw, 62px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+  opacity: 0;
+
+  animation:
+    overviewHeadingReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  animation-delay: 0.45s;
+}
+
+
+@keyframes overviewHeadingReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ovrview-text p {
+
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #63737c;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+
+  opacity: 0;
+
+  animation:
+    overviewParagraphReveal
+    1s
+    ease
+    forwards;
+
+  animation-delay: 0.75s;
+}
+
+
+@keyframes overviewParagraphReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   RIGHT VIDEO CONTAINER
+========================================================= */
+
+.overview-video {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 370px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #102b38;
+
+  box-shadow:
+    0 25px 70px rgba(17, 47, 63, 0.16);
+
+  opacity: 0;
+
+  transform:
+    translateX(70px)
+    scale(0.96);
+
+  animation:
+    overviewVideoReveal
+    1.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  animation-delay: 0.35s;
+}
+
+
+@keyframes overviewVideoReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(70px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.overview-video video {
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1.05);
+
+  transition:
+    transform 1s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   VIDEO HOVER
+========================================================= */
+
+.overview-video:hover video {
+
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.overview-video::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02),
+      rgba(4, 20, 30, 0.25)
+    );
+
+  opacity: 0.8;
+
+  transition:
+    opacity 0.5s ease;
+}
+
+
+.overview-video:hover::after {
+
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.media-overview::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 110px;
+
+  width: 4px;
+
+  height: 120px;
+
+  background: #54b8dc;
+
+  transform: scaleY(0);
+
+  transform-origin: top;
+
+  animation:
+    overviewLineReveal
+    1s
+    ease
+    forwards;
+
+  animation-delay: 0.5s;
+}
+
+
+@keyframes overviewLineReveal {
+
+  to {
+    transform: scaleY(1);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .media-overview {
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 90px 7%;
+  }
+
+
+  .ovrview-text {
+
+    max-width: 750px;
+  }
+
+
+  .ovrview-text p {
+
+    max-width: 700px;
+  }
+
+
+  .overview-video {
+
+    height: 450px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .media-overview {
+
+    min-height: auto;
+
+    padding: 70px 6%;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .media-overview::before {
+
+    top: 70px;
+
+    height: 90px;
+
+    width: 3px;
+  }
+
+
+  .overview-label {
+
+    font-size: 11px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .ovrview-text h2 {
+
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .ovrview-text p {
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .overview-video {
+
+    height: 300px;
+
+    border-radius: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .media-overview {
+
+    padding: 60px 5%;
+  }
+
+
+  .ovrview-text h2 {
+
+    font-size: 34px;
+  }
+
+
+  .ovrview-text p {
+
+    font-size: 13px;
+  }
+
+
+  .overview-video {
+
+    height: 260px;
+
+    border-radius: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ovrview-text,
+  .overview-label,
+  .ovrview-text h2,
+  .ovrview-text p,
+  .overview-video,
+  .media-overview::before {
+
+    animation: none !important;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .overview-video video {
+
+    transform: none;
+
+    transition: none;
+  }
+
+}
+
+/* =========================================================
+   MEDIA & AWARDS SECTION
+========================================================= */
+
+.media-awards {
+  position: relative;
+  width: 100%;
+  padding: 110px 8%;
+  background: #f5f8fa;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.media-awards-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 55px;
+}
+
+
+.media-awards-header h2 {
+  margin: 0 0 12px;
+
+  color: #172b3a;
+
+  font-size: clamp(40px, 5vw, 65px);
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+
+  opacity: 0;
+
+  animation: awardsHeading 1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.media-awards-header p {
+  margin: 0;
+
+  color: #687983;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  opacity: 0;
+
+  animation: awardsSubtitle 0.9s ease forwards;
+
+  animation-delay: 0.25s;
+}
+
+
+@keyframes awardsHeading {
+
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes awardsSubtitle {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.media-awards-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.media-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 45px rgba(20, 55, 70, 0.09);
+
+  opacity: 0;
+
+  transform: translateY(70px);
+
+  animation:
+    mediaCardReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+
+/* stagger animation */
+
+.media-card:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.media-card:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.media-card:nth-child(3) {
+  animation-delay: 0.65s;
+}
+
+
+@keyframes mediaCardReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.media-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 25px 65px rgba(20, 55, 70, 0.16);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.media-card > img {
+  display: block;
+
+  width: 100%;
+
+  height: 270px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.media-card:hover > img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.media-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 270px;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(5, 25, 35, 0.5)
+    );
+
+  opacity: 0.7;
+
+  transition: opacity 0.5s ease;
+}
+
+
+.media-card:hover::before {
+  opacity: 0.35;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.media-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 27px 27px 30px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.media-card-content h3 {
+  margin: 0 0 22px;
+
+  color: #172b3a;
+
+  font-size: 20px;
+
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  letter-spacing: -0.3px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.media-card:hover .media-card-content h3 {
+  transform: translateX(4px);
+
+  color: #23627a;
+}
+
+
+/* =========================================================
+   SOURCE
+========================================================= */
+
+.media-source {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #54b8dc;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.media-date {
+  display: block;
+
+  color: #8a989f;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TOP ACCENT LINE
+========================================================= */
+
+.media-card-content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 27px;
+
+  width: 45px;
+
+  height: 3px;
+
+  background: #54b8dc;
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.media-card:hover .media-card-content::before {
+  width: 80px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .media-awards {
+    padding: 90px 7%;
+  }
+
+  .media-awards-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .media-awards {
+    padding: 70px 6%;
+  }
+
+
+  .media-awards-header {
+    margin-bottom: 40px;
+  }
+
+
+  .media-awards-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .media-awards-header p {
+    font-size: 14px;
+  }
+
+
+  .media-awards-cards {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+
+  .media-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+
+  .media-card > img {
+    height: 250px;
+  }
+
+
+  .media-card::before {
+    height: 250px;
+  }
+
+
+  .media-card-content {
+    padding: 24px 22px 27px;
+  }
+
+
+  .media-card-content h3 {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .media-awards {
+    padding: 60px 5%;
+  }
+
+
+  .media-awards-header h2 {
+    font-size: 35px;
+  }
+
+
+  .media-awards-header p {
+    font-size: 13px;
+  }
+
+
+  .media-card > img {
+    height: 220px;
+  }
+
+
+  .media-card::before {
+    height: 220px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .media-awards-header h2,
+  .media-awards-header p,
+  .media-card {
+    animation: none !important;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .media-card > img {
+    transition: none;
+  }
+
+}
+
+
+/* =========================================================
+   BLOGS SECTION
+========================================================= */
+
+.blogs-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 8%;
+  overflow: hidden;
+
+  /* Background Image */
+  /* background-image:
+    linear-gradient(
+      rgba(7, 25, 35, 0.92),
+      rgba(7, 25, 35, 0.94)
+    ),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+  background: linear-gradient(
+    90deg,
+    #087fc2,
+    #008f7b,
+    #009b4e
+  );
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.blogs-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: -150px;
+  right: -150px;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(97, 201, 237, 0.15);
+
+  animation: blogCircle 8s ease-in-out infinite;
+}
+
+
+.blogs-section::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -200px;
+  left: -150px;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(97, 201, 237, 0.1);
+}
+
+
+@keyframes blogCircle {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.blogs-header {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 40px;
+
+  margin-bottom: 55px;
+}
+
+
+.blogs-header h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+  opacity: 0;
+
+  animation:
+    blogHeadingReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.blogs-header p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  opacity: 0;
+
+  animation:
+    blogSubtitleReveal
+    0.9s
+    ease
+    forwards;
+
+  animation-delay: 0.25s;
+}
+
+
+@keyframes blogHeadingReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes blogSubtitleReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.view-blogs-btn {
+  position: relative;
+
+  flex-shrink: 0;
+
+  padding: 14px 27px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 30px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  animation:
+    blogButtonReveal
+    0.9s
+    ease
+    forwards;
+
+  animation-delay: 0.45s;
+
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.view-blogs-btn::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 0;
+
+  background: #61c9ed;
+
+  z-index: -1;
+
+  transition: height 0.4s ease;
+}
+
+
+.view-blogs-btn:hover {
+  color: #102b38;
+
+  border-color: #61c9ed;
+
+  transform: translateY(-3px);
+}
+
+
+.view-blogs-btn:hover::before {
+  height: 100%;
+}
+
+
+@keyframes blogButtonReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   BLOG CARDS
+========================================================= */
+
+.blog-cards {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blog-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+
+  transform: translateY(70px);
+
+  animation:
+    blogCardReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  transition:
+    transform 0.5s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+
+/* staggered cards */
+
+.blog-card:nth-child(1) {
+  animation-delay: 0.35s;
+}
+
+.blog-card:nth-child(2) {
+  animation-delay: 0.55s;
+}
+
+.blog-card:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+
+@keyframes blogCardReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.blog-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   BLOG IMAGE
+========================================================= */
+
+.blog-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 260px;
+
+  overflow: hidden;
+}
+
+
+.blog-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.blog-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 35%,
+      rgba(4, 22, 31, 0.65)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.blog-image span {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  z-index: 2;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #173b4d;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.blog-card:hover .blog-image span {
+  transform: translateY(-5px);
+
+  background: #61c9ed;
+}
+
+
+/* =========================================================
+   BLOG CONTENT
+========================================================= */
+
+.blog-content {
+  padding: 27px 25px 25px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   BLOG TITLE
+========================================================= */
+
+.blog-content h3 {
+  margin: 0 0 15px;
+
+  color: #172b3a;
+
+  font-size: 20px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  letter-spacing: -0.3px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.blog-card:hover .blog-content h3 {
+  color: #23627a;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   BLOG DESCRIPTION
+========================================================= */
+
+.blog-content p {
+  margin: 0 0 22px;
+
+  color: #687982;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   KNOW MORE BUTTON
+========================================================= */
+
+.knoww.more {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #173b4d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+
+.knoww.more span {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: #e7f5fa;
+
+  color: #23627a;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.blog-card:hover .knoww.more {
+  gap: 15px;
+
+  color: #23627a;
+}
+
+
+.blog-card:hover .knoww.more span {
+  transform: translateX(4px);
+
+  background: #61c9ed;
+}
+
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.blog-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+
+  height: 4px;
+
+  z-index: 5;
+
+  background: #61c9ed;
+
+  transition: width 0.5s ease;
+}
+
+
+.blog-card:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .blogs-section {
+    padding: 90px 7%;
+  }
+
+  .blogs-header {
+    align-items: flex-start;
+  }
+
+  .blog-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .blogs-section {
+    padding: 70px 6%;
+
+    background-attachment: scroll;
+  }
+
+
+  .blogs-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .blogs-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .blogs-header p {
+    font-size: 14px;
+  }
+
+
+  .view-blogs-btn {
+    padding: 12px 22px;
+  }
+
+
+  .blog-cards {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+
+  .blog-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+
+  .blog-image {
+    height: 240px;
+  }
+
+
+  .blog-content {
+    padding: 24px 21px 25px;
+  }
+
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+
+  .blog-content p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .blogs-section {
+    padding: 60px 5%;
+  }
+
+
+  .blogs-header h2 {
+    font-size: 36px;
+  }
+
+
+  .blog-image {
+    height: 215px;
+  }
+
+
+  .blog-content h3 {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .blogs-header h2,
+  .blogs-header p,
+  .view-blogs-btn,
+  .blog-card {
+
+    animation: none !important;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .blog-image img,
+  .blog-card,
+  .knoww.more span {
+
+    transition: none;
+  }
+
+}

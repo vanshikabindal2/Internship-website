@@ -1,0 +1,570 @@
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.contract-pages {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  position: relative;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contract-lefts {
+  width: 100%;
+  min-height: 650px;
+
+  background-image: url("https://images.unsplash.com/photo-1711287806947-32647972b7cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.contract-overlays {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(35, 29, 29, 0.534);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.contract-contents {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 8%;
+
+  color: white;
+}
+
+
+.contract-contents h1 {
+  font-size: 63px;
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+
+  font-weight: 800;
+}
+
+
+.contract-contents p {
+  font-size: 23px;
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  margin: 0;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.contract-arrows {
+  position: absolute;
+
+  left: 20px;
+  bottom: 35px;
+
+  z-index: 3;
+
+  color: white;
+
+  font-size: 75px;
+  font-weight: 300;
+
+  letter-spacing: -25px;
+}
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.contract-form-boxs {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 7%;
+  bottom: 40px;
+
+  width: 390px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   FORM HEADING
+========================= */
+
+.contract-form-boxs h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.contract-form-boxs > p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* =========================
+   FORM ROW
+========================= */
+
+.form-rows {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.form-rows input,
+.form-rows select {
+  width: 50%;
+
+  height: 45px;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+
+.form-rows input:focus,
+.form-rows select:focus {
+  background: #eeeeee;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.contract-form-boxs textarea {
+  width: 100%;
+
+  height: 90px;
+
+  resize: none;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.agreements {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+
+  line-height: 1.4;
+}
+
+
+.agreements input {
+  width: 17px;
+
+  height: 17px;
+
+  margin-top: 1px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.contract-form-boxs button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #0783b3;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.contract-form-boxs button:hover {
+  background: #056b91;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .contract-lefts {
+    width: 100%;
+  }
+
+
+  .contract-contents h1 {
+    font-size: 45px;
+  }
+
+
+  .contract-contents p {
+    font-size: 18px;
+  }
+
+
+  .contract-form-boxs {
+    right: 4%;
+
+    width: 370px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contract-pages {
+    min-height: auto;
+
+    padding-bottom: 0;
+
+    display: block;
+  }
+
+
+  .contract-lefts {
+    width: 100%;
+
+    min-height: 600px;
+
+    align-items: flex-start;
+  }
+
+
+  .contract-contents {
+    padding: 80px 25px 0;
+  }
+
+
+  .contract-contents h1 {
+    font-size: 38px;
+  }
+
+
+  .contract-contents p {
+    font-size: 17px;
+  }
+
+
+  .contract-form-boxs {
+    position: relative;
+
+    bottom: auto;
+    right: auto;
+
+    width: calc(100% - 30px);
+
+    margin: -180px auto 30px;
+
+    padding: 25px;
+
+    z-index: 10;
+  }
+
+
+  .form-rows {
+    display: block;
+  }
+
+
+  .form-rows input,
+  .form-rows select {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+
+  .contract-arrows {
+    display: none;
+  }
+
+}
+
+.air-freight-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 60px;
+
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  box-sizing: border-box;
+}
+
+/* LEFT IMAGE */
+
+.air-freight-image {
+  width: 52%;
+  height: 680px;
+  overflow: hidden;
+
+  border-radius: 0 20px 20px 0;
+}
+
+.air-freight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* RIGHT CONTENT */
+
+.air-freight-content {
+  width: 48%;
+  padding-right: 20px;
+}
+
+.air-freight-content h2 {
+  margin: 0 0 35px;
+
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.air-freight-content p {
+  margin: 0 0 28px;
+
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+
+  color: #555;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .air-freight-section {
+    padding: 50px 30px;
+    gap: 40px;
+  }
+
+  .air-freight-image {
+    height: 550px;
+  }
+
+  .air-freight-content h2 {
+    font-size: 38px;
+  }
+
+  .air-freight-content p {
+    font-size: 15px;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .air-freight-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .air-freight-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+  }
+
+  .air-freight-content {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .air-freight-content h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
+  .air-freight-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .air-freight-section {
+    padding: 30px 15px;
+  }
+
+  .air-freight-image {
+    height: 300px;
+  }
+
+  .air-freight-content h2 {
+    font-size: 29px;
+  }
+
+  .air-freight-content p {
+    font-size: 14px;
+  }
+}
+/* mana g e supply  chain */
+.supply-chain-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.supply-chain-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 45px;
+}
+
+.supply-chain-image {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.supply-chain-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .supply-chain-section {
+    padding: 45px 15px;
+  }
+
+  .supply-chain-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .supply-chain-section {
+    padding: 35px 10px;
+  }
+
+  .supply-chain-section h2 {
+    font-size: 25px;
+  }
+}

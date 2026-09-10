@@ -1,0 +1,182 @@
+.vas-section {
+  width: 100%;
+  padding: 70px 8% 90px;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+
+/* Heading */
+
+.vas-heading {
+  max-width: 900px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.vas-heading h2 {
+  margin: 0 0 22px;
+
+  font-size: 44px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.vas-heading p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.7;
+  color: #243b5a;
+}
+
+
+/* Grid */
+
+.vas-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 70px;
+  row-gap: 55px;
+}
+
+
+/* Card */
+
+.vas-card {
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(70px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: var(--delay);
+}
+
+
+/* Scroll hone par */
+
+.vas-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Image */
+
+.vas-image {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.4s ease;
+}
+
+.vas-image img {
+  width: 65px;
+  height: 65px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* Hover */
+
+.vas-card:hover .vas-image {
+  transform: translateY(-8px) scale(1.08);
+}
+
+
+/* Title */
+
+.vas-card h3 {
+  max-width: 220px;
+  margin: 0 auto;
+
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 400;
+
+  color: #111827;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+  .vas-section {
+    padding: 60px 5%;
+  }
+
+  .vas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+  }
+
+  .vas-heading h2 {
+    font-size: 38px;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .vas-section {
+    padding: 50px 20px 70px;
+  }
+
+  .vas-heading h2 {
+    font-size: 32px;
+  }
+
+  .vas-heading p {
+    font-size: 16px;
+  }
+
+  .vas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 20px;
+  }
+
+  .vas-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vas-image img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vas-card h3 {
+    font-size: 16px;
+  }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 450px) {
+
+  .vas-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

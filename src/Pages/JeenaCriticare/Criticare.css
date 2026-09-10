@@ -1,0 +1,978 @@
+.contract-page {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  position: relative;
+  /* overflow: hidden hata diya — ye hi form ko neeche se cut kar raha tha */
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px; /* form box ke liye extra jagah, taaki content bahar na nikle */
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contract-left {
+  width: 100%;
+  min-height: 650px;
+  background-image: url("https://images.unsplash.com/photo-1780570349032-63d64f1ff455?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.contract-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(35, 29, 29, 0.534);
+}
+
+
+.contract-content {
+  position: relative;
+  z-index: 2;
+
+  padding-left: 8%;
+  color: white;
+}
+
+
+.contract-content h1 {
+  font-size: 58px;
+  line-height: 1.15;
+  margin: 0 0 25px;
+
+  font-weight: 700;
+}
+
+
+.contract-content p {
+  font-size: 23px;
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  margin: 0;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.contract-arrow {
+  position: absolute;
+
+  left: 20px;
+  bottom: 35px;
+
+  z-index: 3;
+
+  color: white;
+
+  font-size: 75px;
+  font-weight: 300;
+
+  letter-spacing: -25px;
+}
+
+
+/* =========================
+   FORM BOX
+========================= */
+
+.contract-form-box {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 7%;
+
+  /* top/translateY ki jagah bottom se anchor kiya —
+     ab form apni poori height ke hisaab se dikhega, cut nahi hoga */
+  bottom: 40px;
+
+  width: 390px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.contract-form-box h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #222;
+}
+
+
+.contract-form-box > p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-row {
+  display: flex;
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+.form-row input,
+.form-row select {
+
+  width: 50%;
+
+  height: 45px;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 0 14px;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+
+.form-row input:focus,
+.form-row select:focus {
+  background: #eeeeee;
+}
+
+
+.contract-form-box textarea {
+
+  width: 100%;
+
+  height: 90px;
+
+  resize: none;
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.agreement {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #444;
+
+  margin-bottom: 18px;
+
+  line-height: 1.4;
+}
+
+
+.agreement input {
+  width: 17px;
+  height: 17px;
+
+  margin-top: 1px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.contract-form-box button {
+
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  background: #0783b3;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.contract-form-box button:hover {
+  background: #056b91;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .contract-left {
+    width: 100%;
+  }
+
+  .contract-content h1 {
+    font-size: 45px;
+  }
+
+  .contract-content p {
+    font-size: 18px;
+  }
+
+  .contract-form-box {
+    right: 4%;
+    width: 370px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contract-page {
+    min-height: auto;
+    padding-bottom: 0;
+    display: block;
+  }
+
+
+  .contract-left {
+    width: 100%;
+
+    min-height: 600px;
+
+    align-items: flex-start;
+  }
+
+
+  .contract-content {
+    padding: 80px 25px 0;
+  }
+
+
+  .contract-content h1 {
+    font-size: 38px;
+  }
+
+
+  .contract-content p {
+    font-size: 17px;
+  }
+
+
+  .contract-form-box {
+    position: relative;
+
+    bottom: auto;
+    right: auto;
+
+    width: calc(100% - 30px);
+
+    margin: -180px auto 30px;
+
+    padding: 25px;
+
+    z-index: 10;
+  }
+
+
+  .form-row {
+    display: block;
+  }
+
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+
+  .contract-arrow {
+    display: none;
+  }
+}
+
+/* about */
+.moving-shipment {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 75px;
+
+  box-sizing: border-box;
+}
+
+/* LEFT IMAGE */
+.shipment-image {
+  width: 470px;
+  height: 560px;
+  flex-shrink: 0;
+
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.shipment-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.shipment-content {
+  flex: 1;
+}
+
+.shipment-content h2 {
+  margin: 0 0 25px;
+
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  line-height: 1.22;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.shipment-content p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #536174;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .moving-shipment {
+    gap: 40px;
+    padding: 30px 25px;
+  }
+
+  .shipment-image {
+    width: 42%;
+    height: 500px;
+  }
+
+  .shipment-content h2 {
+    font-size: 34px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .moving-shipment {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+
+    padding: 30px 20px;
+  }
+
+  .shipment-image {
+    width: 100%;
+    height: 420px;
+  }
+
+  .shipment-content h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .shipment-content p {
+    font-size: 15px;
+  }
+}
+
+
+
+
+/* =========================================
+   CRITICARE COUNTING SECTION
+========================================= */
+
+.criticare-stats {
+  width: 100%;
+  min-height: 295px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    110deg,
+    #0879c9,
+    #008f91,
+    #00a84f
+  );
+
+  color: white;
+  padding: 45px 30px;
+  box-sizing: border-box;
+}
+
+
+/* Individual box */
+
+.stat-box {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+/* Icons */
+
+.stat-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+
+/* Number */
+
+.stat-box h3 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: white;
+}
+
+
+/* Text */
+
+.stat-box p {
+  margin: 3px 0 0;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .criticare-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 20px;
+
+    padding: 50px 20px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .criticare-stats {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 50px 20px;
+  }
+
+  .stat-box h3 {
+    font-size: 30px;
+  }
+
+  .stat-box p {
+    font-size: 15px;
+  }
+
+}
+
+/* =========================================
+   COUNTING / STATS SECTION
+========================================= */
+
+.criticare-stats {
+  width: 100%;
+  min-height: 295px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px 30px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    110deg,
+    #0879c9,
+    #008f91,
+    #00a84f
+  );
+
+  color: white;
+}
+
+
+/* =========================================
+   STAT BOX
+========================================= */
+
+.stat-box {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 5px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.stat-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 2px solid white;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 25px;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.stat-box h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.stat-box p {
+  margin: 3px 0 0;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .criticare-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 20px;
+
+    padding: 50px 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .criticare-stats {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 50px 20px;
+  }
+
+
+  .stat-box h3 {
+    font-size: 30px;
+  }
+
+
+  .stat-box p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MANAGE YOUR SUPPLY CHAIN
+========================================= */
+
+.supply-chain-section {
+  width: 100%;
+  padding: 50px 25px 70px;
+  background: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+.supply-chain-section h2 {
+  margin: 0 0 35px;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  color: #172033;
+  line-height: 1.2;
+}
+
+.supply-chain-image {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.supply-chain-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+  .supply-chain-section {
+    padding: 40px 20px 55px;
+  }
+
+  .supply-chain-section h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .supply-chain-section {
+    padding: 35px 12px 45px;
+  }
+
+  .supply-chain-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+}
+
+.certificate-sections {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Outer wrapper: heading + grid, centered */
+.certificate-containers {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.certificate-headings {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.certificate-headings h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.certificate-headings p {
+  font-size: 1rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid container — direct child of certificate-containers, holds all 12 cards */
+.certificate-containers {
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-containers > .certificate-cards:first-of-type,
+.certificate-cards {
+  /* individual card styling handled below */
+}
+
+/* Since all cards share the same class, wrap them visually via grid on the parent.
+   We target the parent (.certificate-containers) to lay out its .certificate-cards children */
+.certificate-containers {
+  display: block;
+}
+
+.certificate-containers::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Grid layout applied directly using the cards as grid items of their parent */
+.certificate-containers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.certificate-headings {
+  grid-column: 1 / -1; /* heading spans full width of the grid */
+}
+
+/* Individual card */
+.certificate-cards {
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-cards:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #dfe3e8;
+}
+
+/* Logo wrapper */
+.certificate-logos {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.certificate-logos img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.certificate-cards:hover .certificate-logos img {
+  filter: grayscale(0%);
+}
+
+/* Card text */
+.certificate-cards h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+  .certificate-containers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-containers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .certificate-headings h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-containers {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-cards {
+    min-height: 180px;
+    padding: 20px 15px;
+  }
+}
+
+
+/* ================= SCROLL ANIMATIONS ================= */
+/* Isse apni Criticare.css file ke end me paste kar do */
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  will-change: transform, opacity;
+}
+
+/* Upar se aane wala (top se neeche slide) */
+.animate-on-scroll.down {
+  transform: translateY(-60px);
+}
+
+/* Neeche se aane wala (bottom se upar slide) */
+.animate-on-scroll.up {
+  transform: translateY(60px);
+}
+
+/* Visible hone par - dono cases me same */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

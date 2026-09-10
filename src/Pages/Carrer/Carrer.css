@@ -24,6 +24,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   align-items: center;
 
   gap: 50px;
@@ -52,7 +53,9 @@
 }
 
 
-/* Hero glow */
+/* =====================================================
+   HERO GLOW
+===================================================== */
 
 .carrer-hero::before {
   content: "";
@@ -72,6 +75,8 @@
   right: -100px;
 
   animation: heroGlow 7s ease-in-out infinite;
+
+  pointer-events: none;
 }
 
 .carrer-hero::after {
@@ -90,6 +95,8 @@
 
   bottom: -150px;
   left: 30%;
+
+  pointer-events: none;
 }
 
 
@@ -99,13 +106,16 @@
 
 .carrer-content {
   position: relative;
+
   z-index: 3;
 
   max-width: 650px;
 }
 
 
-/* Label */
+/* =====================================================
+   LABEL
+===================================================== */
 
 .career-label {
   display: inline-block;
@@ -125,13 +135,16 @@
   font-family: Arial, sans-serif;
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 2px;
 }
 
 
-/* Heading */
+/* =====================================================
+   HEADING
+===================================================== */
 
 .carrer-content h1 {
   margin: 0 0 28px;
@@ -148,7 +161,9 @@
 }
 
 
-/* Paragraph */
+/* =====================================================
+   PARAGRAPH
+===================================================== */
 
 .carrer-content p {
   max-width: 580px;
@@ -177,6 +192,7 @@
   padding: 15px 32px;
 
   border: none;
+
   border-radius: 50px;
 
   background: linear-gradient(
@@ -190,6 +206,7 @@
   font-family: Arial, sans-serif;
 
   font-size: 16px;
+
   font-weight: 700;
 
   cursor: pointer;
@@ -216,7 +233,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255,255,255,0.45),
+    rgba(255, 255, 255, 0.45),
     transparent
   );
 
@@ -238,11 +255,12 @@
 
 
 /* =====================================================
-   HERO IMAGE
+   HERO IMAGE WRAPPER
 ===================================================== */
 
 .carrer-image-wrapper {
   position: relative;
+
   z-index: 2;
 
   min-height: 500px;
@@ -250,11 +268,14 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 }
 
 
-/* Glow behind image */
+/* =====================================================
+   IMAGE GLOW
+===================================================== */
 
 .hero-image-glow {
   position: absolute;
@@ -269,16 +290,22 @@
   filter: blur(55px);
 
   animation: imageGlow 5s ease-in-out infinite;
+
+  pointer-events: none;
 }
 
 
-/* Image */
+/* =====================================================
+   HERO IMAGE
+===================================================== */
 
 .carrer-image {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
+
   max-width: 650px;
 
   height: auto;
@@ -304,6 +331,414 @@
     );
 }
 
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .carrer-hero {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    min-height: auto;
+
+    padding: 140px 5% 70px;
+  }
+
+  .carrer-content h1 {
+    font-size: clamp(38px, 5vw, 52px);
+  }
+
+  .carrer-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .carrer-image-wrapper {
+    min-height: 420px;
+  }
+
+  .carrer-image {
+    max-width: 500px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .carrer-page {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .carrer-hero {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: auto;
+
+    gap: 0;
+
+    /*
+      Navbar ke neeche proper gap
+    */
+    padding: 105px 20px 35px;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .carrer-content {
+    width: 100%;
+
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 3;
+  }
+
+
+  /* =========================
+     LABEL
+  ========================= */
+
+  .career-label {
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =========================
+     HEADING
+  ========================= */
+
+  .carrer-content h1 {
+    width: 100%;
+
+    max-width: 390px;
+
+    margin: 0 0 16px;
+
+    font-size: 32px;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.7px;
+  }
+
+
+  /* =========================
+     PARAGRAPH
+  ========================= */
+
+  .carrer-content p {
+    width: 100%;
+
+    max-width: 350px;
+
+    margin: 0 auto 22px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     BUTTON
+  ========================= */
+
+  .opening-btn {
+    min-width: 140px;
+
+    padding: 12px 24px;
+
+    font-size: 13px;
+  }
+
+  .opening-btn:hover {
+    transform: none;
+
+    box-shadow:
+      0 12px 28px rgba(7, 131, 179, 0.25);
+  }
+
+
+  /* =========================
+     IMAGE WRAPPER
+  ========================= */
+
+  .carrer-image-wrapper {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+
+  /* =========================
+     IMAGE GLOW
+  ========================= */
+
+  .hero-image-glow {
+    width: 80%;
+
+    height: 65%;
+
+    filter: blur(45px);
+  }
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .carrer-image {
+    width: 100%;
+
+    max-width: 350px;
+
+    height: auto;
+
+    filter:
+      drop-shadow(
+        0 18px 25px rgba(0, 50, 70, 0.14)
+      );
+
+    animation: imageFloat 5s ease-in-out infinite;
+  }
+
+  .carrer-image:hover {
+    transform: none;
+
+    filter:
+      drop-shadow(
+        0 18px 25px rgba(0, 50, 70, 0.14)
+      );
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .carrer-hero {
+    /*
+      Navbar ke baad controlled spacing
+    */
+    padding: 95px 16px 30px;
+  }
+
+
+  .career-label {
+    margin-bottom: 13px;
+
+    font-size: 9px;
+
+    padding: 6px 12px;
+  }
+
+
+  .carrer-content h1 {
+    max-width: 360px;
+
+    font-size: 30px;
+
+    line-height: 1.13;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .carrer-content p {
+    max-width: 335px;
+
+    font-size: 12.5px;
+
+    line-height: 1.6;
+
+    margin-bottom: 21px;
+  }
+
+
+  .opening-btn {
+    min-width: 138px;
+
+    padding: 12px 22px;
+
+    font-size: 13px;
+  }
+
+
+  .carrer-image-wrapper {
+    margin-top: 20px;
+  }
+
+
+  .carrer-image {
+    max-width: 345px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .carrer-hero {
+    padding: 90px 13px 28px;
+  }
+
+
+  .carrer-content h1 {
+    max-width: 330px;
+
+    font-size: 27px;
+
+    line-height: 1.14;
+  }
+
+
+  .carrer-content p {
+    max-width: 310px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+
+  .opening-btn {
+    min-width: 135px;
+
+    padding: 11px 20px;
+
+    font-size: 12.5px;
+  }
+
+
+  .carrer-image-wrapper {
+    margin-top: 18px;
+  }
+
+
+  .carrer-image {
+    max-width: 325px;
+  }
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes heroGlow {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+
+@keyframes imageGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+@keyframes imageFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .carrer-hero::before,
+  .hero-image-glow,
+  .carrer-image {
+    animation: none;
+  }
+
+  .opening-btn,
+  .carrer-image {
+    transition: none;
+  }
+}
 
 /* =====================================================
    OVERVIEW

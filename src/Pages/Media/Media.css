@@ -462,24 +462,19 @@
 
 
 /* overview */
-
 /* =========================================================
    MEDIA OVERVIEW
 ========================================================= */
 
 .media-overview {
   position: relative;
-
   width: 100%;
-
   min-height: 700px;
 
   padding: 110px 8%;
 
   display: grid;
-
   grid-template-columns: 0.9fr 1.1fr;
-
   align-items: center;
 
   gap: 80px;
@@ -496,7 +491,6 @@
 
 .ovrview-text {
   position: relative;
-
   z-index: 2;
 
   max-width: 600px;
@@ -662,7 +656,7 @@
 
 
 /* =========================================================
-   RIGHT VIDEO CONTAINER
+   YOUTUBE VIDEO CONTAINER
 ========================================================= */
 
 .overview-video {
@@ -701,29 +695,33 @@
 @keyframes overviewVideoReveal {
 
   from {
+
     opacity: 0;
 
     transform:
       translateX(70px)
       scale(0.96);
+
   }
 
   to {
+
     opacity: 1;
 
     transform:
       translateX(0)
       scale(1);
+
   }
 
 }
 
 
 /* =========================================================
-   VIDEO
+   YOUTUBE IFRAME
 ========================================================= */
 
-.overview-video video {
+.overview-video iframe {
 
   display: block;
 
@@ -731,15 +729,10 @@
 
   height: 100%;
 
+  border: none;
+
   object-fit: cover;
 
-  object-position: center;
-
-  transform: scale(1.05);
-
-  transition:
-    transform 1s
-    cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
@@ -747,14 +740,24 @@
    VIDEO HOVER
 ========================================================= */
 
-.overview-video:hover video {
+.overview-video {
 
-  transform: scale(1.1);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.overview-video:hover {
+
+  box-shadow:
+    0 30px 80px rgba(17, 47, 63, 0.22);
+
 }
 
 
 /* =========================================================
-   VIDEO OVERLAY
+   DECORATIVE OVERLAY
 ========================================================= */
 
 .overview-video::after {
@@ -771,10 +774,10 @@
     linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.02),
-      rgba(4, 20, 30, 0.25)
+      rgba(4, 20, 30, 0.12)
     );
 
-  opacity: 0.8;
+  opacity: 0.45;
 
   transition:
     opacity 0.5s ease;
@@ -783,7 +786,8 @@
 
 .overview-video:hover::after {
 
-  opacity: 0.45;
+  opacity: 0.2;
+
 }
 
 
@@ -824,7 +828,9 @@
 @keyframes overviewLineReveal {
 
   to {
+
     transform: scaleY(1);
+
   }
 
 }
@@ -843,24 +849,28 @@
     gap: 55px;
 
     padding: 90px 7%;
+
   }
 
 
   .ovrview-text {
 
     max-width: 750px;
+
   }
 
 
   .ovrview-text p {
 
     max-width: 700px;
+
   }
 
 
   .overview-video {
 
     height: 450px;
+
   }
 
 }
@@ -881,6 +891,7 @@
     grid-template-columns: 1fr;
 
     gap: 40px;
+
   }
 
 
@@ -891,6 +902,7 @@
     height: 90px;
 
     width: 3px;
+
   }
 
 
@@ -901,6 +913,7 @@
     letter-spacing: 2.5px;
 
     margin-bottom: 18px;
+
   }
 
 
@@ -913,6 +926,7 @@
     letter-spacing: -1px;
 
     margin-bottom: 22px;
+
   }
 
 
@@ -921,6 +935,7 @@
     font-size: 14px;
 
     line-height: 1.75;
+
   }
 
 
@@ -929,6 +944,7 @@
     height: 300px;
 
     border-radius: 18px;
+
   }
 
 }
@@ -943,18 +959,21 @@
   .media-overview {
 
     padding: 60px 5%;
+
   }
 
 
   .ovrview-text h2 {
 
     font-size: 34px;
+
   }
 
 
   .ovrview-text p {
 
     font-size: 13px;
+
   }
 
 
@@ -963,6 +982,7 @@
     height: 260px;
 
     border-radius: 16px;
+
   }
 
 }
@@ -986,14 +1006,7 @@
     opacity: 1;
 
     transform: none;
-  }
 
-
-  .overview-video video {
-
-    transform: none;
-
-    transition: none;
   }
 
 }

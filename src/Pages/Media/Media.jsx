@@ -33,33 +33,44 @@ const Media = () => {
     </section>
 
      {/* // overview */}
-    <section className='media-overview'>
-        {/* left */}
-        <div className='ovrview-text'>
-            <span className='overview-label'>Overview</span>
-            <h2>Delivering Excellence <br />Through Every Connection</h2>
-            <p>Unveil the latest media features, thought-provoking blogs, and insightful case studies that showcase Jeena’s expertise in the logistics industry. From new media features to detailed analysis, relish new stories and knowledge sessions daily!</p>
+<section className="media-overview">
 
-        </div>
-        {/* right */}
-        <div className='overview-video'>
-            <video
-          className="media-hero"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        >
+  {/* ================= LEFT TEXT ================= */}
+  <div className="ovrview-text">
 
-          <source                  
-            src="/video/video.mp4"
-            type="video/mp4"
-          />
+    <span className="overview-label">
+      Overview
+    </span>
 
-        </video>
-        </div>
-    </section>
+    <h2>
+      Delivering Excellence <br />
+      Through Every Connection
+    </h2>
+
+    <p>
+      Unveil the latest media features, thought-provoking blogs,
+      and insightful case studies that showcase Jeena’s expertise
+      in the logistics industry. From new media features to
+      detailed analysis, relish new stories and knowledge sessions daily!
+    </p>
+
+  </div>
+
+
+  {/* ================= RIGHT YOUTUBE VIDEO ================= */}
+  <div className="overview-video">
+
+    <iframe
+      src="https://www.youtube.com/embed/KBdwV9B5CAE?start=10"
+      title="Jeena & Company Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+
+  </div>
+
+</section>
 
     {/* media-awards */}
     <section className='media-awards'>

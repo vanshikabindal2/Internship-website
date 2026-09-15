@@ -145,7 +145,7 @@ const StatCounter = ({
 
 const Home = () => {
   const statsRef = useRef(null);
-
+  const globalRef = useRef(null);
   const [startCounting, setStartCounting] = useState(false);
 
   // ==================================================
@@ -160,7 +160,28 @@ const Home = () => {
 
   const wheelLock = useRef(false);
 
+// ==================================================
+// GLOBAL MAP SCROLL ANIMATION
+// ==================================================
 
+useEffect(() => {
+  const section = globalRef.current;
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      console.log("GLOBAL SECTION intersecting:", entry.isIntersecting, entry.intersectionRatio);
+      if (entry.isIntersecting) {
+        section.classList.add("global-visible");
+        observer.unobserve(section);
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  observer.observe(section);
+  return () => observer.disconnect();
+}, []);
   // ==================================================
   // START COUNTER WHEN USER SCROLLS TO STATS
   // ==================================================
@@ -635,7 +656,7 @@ const Home = () => {
 
 {/* map */}
 
-    <section className="global-section">
+    <section className="global-section" ref={globalRef}>
 
       <h1>6 Continents 60 Countries</h1>
 

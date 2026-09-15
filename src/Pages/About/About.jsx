@@ -55,7 +55,7 @@ const About = () => {
            
         </section>
         {/* tapestry  */}
-        <section className='legacy-section'>
+        <section className='legacy-section'> 
           <div className='legacy-container'>
             <div className='legacy-logo-wrapper'>
               <img src="https://jeena.com/wp-content/uploads/2025/01/FINAL_125-Logo-with-Tagline.png" className='legacy-logo' alt="" />

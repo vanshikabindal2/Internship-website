@@ -675,15 +675,27 @@ const Home = () => {
           </span>
 
 
-          <h2>
+          {/* <h2>
             Complete logistics
             <br />
 
             <span>
-              solutions for your business
+              solutions for your business 
             </span>
-          </h2>
+            <button className="service-btn">view all</button>
+          </h2> */}
+<h2>
+  Complete logistics
+  <br />
 
+  <span className="service-heading-row">
+    solutions for your business
+
+    <Link to="/service" className="service-btn">
+      <span>view all ↗</span>
+    </Link>
+  </span>
+</h2>
 
           {/* ==================================================
               SERVICES GRID
@@ -724,9 +736,7 @@ const Home = () => {
                   efficiently.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+              
 
               </div>
 
@@ -765,9 +775,7 @@ const Home = () => {
                   deliveries worldwide.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+               
 
               </div>
 
@@ -805,9 +813,7 @@ const Home = () => {
                   reliable cargo movement.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+             
 
               </div>
 
@@ -845,9 +851,7 @@ const Home = () => {
                   order fulfillment, and timely distribution.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+               
 
               </div>
 
@@ -885,9 +889,7 @@ const Home = () => {
                   shipments across international borders.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+              
 
               </div>
 
@@ -925,9 +927,7 @@ const Home = () => {
                   to your desired destination.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+             
 
               </div>
 
@@ -966,9 +966,7 @@ const Home = () => {
                   solutions delivered for businesses.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+               
 
               </div>
 
@@ -1006,9 +1004,7 @@ const Home = () => {
                   supplies and pharmaceutical products.
                 </p>
 
-                <div className="service-arrow">
-                  <FaArrowRight />
-                </div>
+              
 
               </div>
 

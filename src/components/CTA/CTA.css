@@ -7,15 +7,14 @@
   min-height: 320px;
 
   /* SOFT COLOR ONLY ON RIGHT SIDE */
-  background:
-    radial-gradient(
-      ellipse 55% 100% at 100% 50%,
-      rgba(8, 127, 194, 0.45) 0%,
-      rgba(0, 143, 123, 0.30) 45%,
-      rgba(0, 155, 78, 0.15) 70%,
-      transparent 100%
-    ),
-    #ffffff;
+  background: linear-gradient(
+    105deg,
+    #c9d4dd 0%,
+    #71b1d6 35%,
+    #acc7d4 55%,
+    #a0e9df 78%,
+    #009b4e 100%
+  );
 
   display: flex;
   align-items: center;
